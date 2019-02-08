@@ -1,0 +1,42 @@
+MESSAGE 1
+Fonctionnement de l'UE
+======================
+
+Le but de cette UE est de reussir dechiffrer par vous-memes une serie de messages chiffres. Cela peut paraitre intimidant de prime abord, mais le jeu en vaut la chandelle. Et n'oubliez pas que vous pouvez utiliser un ordinateur pour vous assister dans les calculs ! Bien sur, il est aussi possible de faire appel a mon assistance mais je ne donnerai pas les reponses, je ne peux que vous aiguiller ou repondre a des techniques precises. Je ne ferai pas non plus de la relecture de code, merci de corriger vous-meme les erreurs basiques de programmation. En particulier celles qui vous sont indiquees par l'ordinateur.
+
+Encodage
+--------
+
+Tous les fichiers textes sont en encodes en Unicode (UTF-8). Si vous utilisez Python, je recommande d'utiliser les versions recentes (Python 3.x) qui supportent de maniere native l'unicode dans les chaines de caracteres. Cela inclut donc tous les caracteres speciaux possibles et imaginables, y compris les langues etrangeres, les symboles mathematiques comme infini, ou les emojis smiley. Cela evitera un certain nombre de maux de tete lies a l'encodage. Si vous y tenez absolument, et que vous maitrisez ce que vous faites, il est possible d'utiliser un autre langage de programmation, mais c'est a vos risques et peril skull, et je n'assurerai pas de support technique. Dans tous les cas, il faudra commenter votre code, et sachez qu'il vous sera demander de l'expliquer a la fin ainsi que votre demarche.
+
+Ordre des messages
+------------------
+
+Le principe est que la serie de messages a dechiffrer est rangee par ordre croissant de difficulte. Il est donc fortement conseiller de les aborder dans l'ordre. Votre but est d'essayer d'arriver le plus loin possible dans le dechiffrement de cette serie de messages.
+
+
+A propos du message suivant
+===========================
+
+Le message suivant a ete crypte en utilisant un chiffre de Cesar. Cela signifie qu'on a juste decale l'alphabet d'un nombre fixe (mais secret) appele la cle. Par exemple, si on decalait l'alphabet de 3 lettres, on remplacerait a par d, puis b par e, c par f, d par g, e par h et ainsi de suite jusqu'a arriver a w qui est remplace par z. Et pour les lettres suivantes, on revient au debut de l'alphabet, ainsi x est remplace par a, y par b et z par c.
+
+
+Chiffre de Cesar
+----------------
+
+Le chiffre de Cesar doit son nom a Jules Cesar qui, selon Suetone, l'utilisait avec l'alphabet grec et un decalage de trois sur la droite pour certaines de ses correspondances secretes, notamment militaires :
+
+<< Il y employait, pour les choses tout a fait secretes, une espece de chiffre qui en rendait le sens inintelligible (les lettres etant disposees de maniere a ne pouvoir jamais former un mot), et qui consistait, je le dis pour ceux qui voudront les dechiffrer, a changer le rang des lettres dans l'alphabet, en ecrivant la quatrieme pour la premiere, c'est-a-dire le d pour le a, et ainsi de suite. >>
+
+-- Suetone, Vie des douze Cesars, Livre I, paragraphe 56.
+
+
+Table ASCII, et table unicode
+-----------------------------
+
+Dans notre cas, l'alphabet ne se limite pas aux 26 lettres mais contient toute la liste des symboles de l'Unicode, dont les chiffres, les lettres minuscules, majuscules, les espaces, sauts de ligne, ponctuation, les symboles divers, les alphabets d'autres langues, les emojis etc. Chaque symbole possede une numero dans la table de caracteres unicode. Pour obtenir le numero d'un caractere on peut utiliser en python la fonction ord. Par exemple ord('a') vaut 97, ord('z') vaut 125, ord('A') vaut 65, ord('#') vaut 35 et ord('hamburger') vaut 127828 (attention : il est necessaire d'utiliser Python 3 ici, dans Python 2 l'instruction ord('hamburger') provoque une erreur :  ord() expected a character, but string of length 4 found). Reciproquement, pour obtenir le symbole numerote par l'entier n dans la table, on peut utiliser la fonction chr. Ainsi, chr(97) retourne le caractere 'a' et chr(125) retourne le caractere 'z'. Si on effectue un decalage de 3 sur tout le tableau des caracteres unicodes, les lettres de la fin de l'alphabet sont envoyees sur les symboles qui suivent dans la table Unicode, par exemple la lettre minuscule 'x' est envoyee sur le symbole '{', la lettre 'y' est envoye sur la barre verticale '|', et enfin 'z' est envoye sur '}'.
+
+A vous de jouer desormais. Il ne vous reste qu'a trouver la cle qui a ete utilisee pour le message suivant. Cela ne posera aucune difficulte pour l'ordinateur (tandis que le travail serait tres fastidieux a la main). Bonne chance !
+
+--
+Joel
