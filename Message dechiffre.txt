@@ -41,9 +41,22 @@ A vous de jouer desormais. Il ne vous reste qu'a trouver la cle qui a ete utilis
 --
 Joel
 
+MESSAGE 2
+"Bravo ! Vous avez déchiffré le second message.
+
+Vous aurez peut-être remarqué quelque chose dans le texte que vous venez de déchiffrer : le symbole apostrophe apparaît très souvent. À quoi cela est-il dû à votre avis ? Cela constitue une faiblesse qui est une porte d'entrée pour le cryptanalyste.
+
+Allez, je vous propose d'essayer de déchiffrer un autre texte, toujours sur le même principe du code de César. Il n'est vraiment plus question de faire le travail à la main. Ça ne devrait pas vous poser trop de difficulté désormais.
+
+--
+Joël
+
+MESSAGE 3
 Félicitations. Mais avouons quand même que jusqu'ici c'était un peu trop facile pour vous, n'est-ce pas ? Je sais que vous attendez un véritable défi.
 
 Bon, maintenant que vous maitrisez le déchiffrement du code de César, nous allons nous attaquer à un problème juste un brin plus difficile. Le message suivant a été chiffré selon le code de César, mais avec une petite variante pour corser les choses : chaque caractère en position paire été chiffré avec une certaine clé, et chaque caractère en position impaire avec une seconde clé ! Saurez-vous trouver le message original ?
 
 --
 Joël
+
+MESSAGE 4
