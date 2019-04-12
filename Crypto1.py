@@ -110,38 +110,38 @@ http://naelshiab.com/python-et-la-cryptographie-et-un-peu-de-piratage-aussi/?fbc
 #        print(Nouv)  
 #-----------------------------------------------------------------------------#
 #----------------------------------MESSAGE 2 et 3----------------------------------#  
-fichier = open("message2.txt", encoding="utf-8")
-Mot=fichier.read()
-#Mot=""
-Taille=len(Mot)
-Dic={}
-Chiffre=0
-Nombre=0
-Borne=0
-for c in Mot:
-    if c in Dic:
-        Dic[c]=Dic[c]+1
-    else:
-        Dic[c]=1
-print(Dic)
-#Borne=int(input('Chiffre de César:'))
-Lettre=input('Tu veux te baser sur quel lettre ?:')
-L=ord(Lettre)
-print(L)
-
-Chi=input('Tu veux la transformer en quoi ?:')
-C=ord(Chi)
-
-print(C)
-Borne= L-C
-print(Borne)
-Nouv=""
-for i in range(Taille):
-    Chiffre=ord(Mot[i])
-    Nombre=chr(Chiffre-Borne)
-    #Nombre=chr(((Chiffre-ord('a')+Borne)%26)+ord('a'))
-    Nouv=Nouv+Nombre
-print(Nouv)
+#fichier = open("message2.txt", encoding="utf-8")
+#Mot=fichier.read()
+##Mot=""
+#Taille=len(Mot)
+#Dic={}
+#Chiffre=0
+#Nombre=0
+#Borne=0
+#for c in Mot:
+#    if c in Dic:
+#        Dic[c]=Dic[c]+1
+#    else:
+#        Dic[c]=1
+#print(Dic)
+##Borne=int(input('Chiffre de César:'))
+#Lettre=input('Tu veux te baser sur quel lettre ?:')
+#L=ord(Lettre)
+#print(L)
+#
+#Chi=input('Tu veux la transformer en quoi ?:')
+#C=ord(Chi)
+#
+#print(C)
+#Borne= L-C
+#print(Borne)
+#Nouv=""
+#for i in range(Taille):
+#    Chiffre=ord(Mot[i])
+#    Nombre=chr(Chiffre-Borne)
+#    #Nombre=chr(((Chiffre-ord('a')+Borne)%26)+ord('a'))
+#    Nouv=Nouv+Nombre
+#print(Nouv)
 
 ###MESSAGE 4 ###
 #23
@@ -153,67 +153,70 @@ print(Nouv)
 #            c_plus_frequent = car
 #    return c_plus_frequent
 #    
-##Mot="""¡7|¢MĖĖMV7!ZD7aĂ"""
-#fichier = open("message4.txt", encoding="utf-8")
-#Mot=fichier.read()
-#Taille=len(Mot)
-#Dic={}
-#Dic2={}
-#Chiffre=0
-#Nombre=0
-#Borne=0
-#d=0
-#e=0
-#for c in Mot:
-#    d=d+1
-#    if d % 2 == 0 :
-#        if c in Dic:
-#            Dic[c]=Dic[c]+1
-#        else:
-#            Dic[c]=1
-#    else:
-#        if c in Dic2:
-#            Dic2[c]=Dic2[c]+1
-#        else:
-#            Dic2[c]=1
-#print(Dic)
-#print(Dic2)
-##c1 = carac_plus_frequent(Dic)
-##c2 = carac_plus_frequent(Dic2)
-##print(c1)
-##print(c2)
-#
-#Lettre=input('1-Tu veux te baser sur quel lettre ?:')
-#L=ord(Lettre)
-#print(L)
-#Chi=input('1-Tu veux la transformer en quoi ?:')
-#C=ord(Chi)
-#Borne= L-C
-#print(Borne)
-#
-#Lettre=input('2-Tu veux te baser sur quel lettre ?:')
-#L=ord(Lettre)
-#print(L)
-#Chi=input('2-Tu veux la transformer en quoi ?:')
-#C=ord(Chi)
-#Borne2= L-C
-#print(Borne2)
-#
-#Nouv=""
-#for i in range(Taille):
-#    e=e+1
-#    if e % 2 ==0:
-#            Chiffre=ord(Mot[i])
-#            Nombre=chr(Chiffre-Borne)
-#            Nouv=Nouv+Nombre
-#    else:
-#            Chiffre=ord(Mot[i])
-#            Nombre=chr(Chiffre-Borne2)
-#            Nouv=Nouv+Nombre
-#print(Nouv[:20])
+#Mot="""¡7|¢MĖĖMV7!ZD7aĂ"""
+fichier = open("message4.txt", encoding="utf-8")
+Mot=fichier.read()
+Taille=len(Mot)
+Dic={}
+Dic2={}
+Chiffre=0
+Nombre=0
+Borne=0
+d=0
+e=0
+for c in Mot:
+    d=d+1
+    if d % 2 == 0 :
+        if c in Dic:
+            Dic[c]=Dic[c]+1
+        else:
+            Dic[c]=1
+    else:
+        if c in Dic2:
+            Dic2[c]=Dic2[c]+1
+        else:
+            Dic2[c]=1
+            
+for x in Dic:   
+    print (x,':',Dic[x])
+    
+print("-----------------------------------")
 
+for y in Dic2:   
+    print (y,':',Dic2[y])        
 
-#| 
+#print(Dic2['c'])
+#c1 = carac_plus_frequent(Dic)
+#c2 = carac_plus_frequent(Dic2)
+#print(c1)
+#print(c2) | 
+
+Lettre=input('1-Tu veux te baser sur quel lettre ?:')
+L=ord(Lettre)
+print(L)
+Chi=input('1-Tu veux la transformer en quoi ?:')
+C=ord(Chi)
+Borne= L-C
+print(Borne)
+
+Lettre=input('2-Tu veux te baser sur quel lettre ?:')
+L=ord(Lettre)
+print(L)
+Chi=input('2-Tu veux la transformer en quoi ?:')
+C=ord(Chi)
+Borne2= L-C
+print(Borne2)
+TabBorne=[Borne,Borne2]
+Nouv=""
+
+for i in range (Taille):
+    e=e+1
+    Chiffre=ord(Mot[i])
+    Caract=chr(Chiffre+TabBorne[i%2])
+    Nouv=Nouv+Caract
+
+print(Nouv[:20])
+ 
 
 
 
