@@ -58,9 +58,9 @@ while i<M and Nouv[:14]!= "Fonctionnement":
     
 ##-------------------------------------------------
 
-fichier = open("message1.txt", encoding="utf-8")
-Mot=fichier.read()
-#Mot= "JuL dreioVet srom.s dlo "
+#fichier = open("message1.txt", encoding="utf-8")
+#Mot=fichier.read()
+Mot= "JuL dreioVet srom.s dlo "
 Taille=len(Mot)
 M=int(input('Taille:'))
 b = True
@@ -73,7 +73,7 @@ for cle in range(2,M):
 #        print(Nouv[:15])
     if Nouv[:2]=="Je":
         b = False
-        print(Nouv[:15])
+        print(Nouv)
         print(cle)
 
 if b:
@@ -201,7 +201,7 @@ print(L)
 #Lettre sera un l donc je dis à mon programme qu'il doit transformer ma lettre "e" en "l"
 Chi=input('1-Tu veux la transformer en quoi ?:')
 C=ord(Chi)
-Borne= C-L
+Borne= L-C
 print(Borne)
 
 #Ici il faudra choisir sur quel lettre vous voulez utiliser comme base pour le code
@@ -212,7 +212,7 @@ print(L)
 #Lettre sera un l donc je dis à mon programme qu'il doit transformer ma lettre "e" en "l"
 Chi=input('2-Tu veux la transformer en quoi ?:')
 C=ord(Chi)
-Borne2= C-L
+Borne2= L-C
 print(Borne2)
 Nouv=""
 
@@ -220,11 +220,11 @@ for i in range(Taille):#Sépare le tri en 2 parties et que chaque borne agis sur
                #différente
     if i%2==0:
         Chiffre=ord(Mot[i])
-        Decal=chr(Chiffre+Borne)
+        Decal=chr(Chiffre-Borne)
         Nouv=Nouv+Decal
     else:
         Chiffre=ord(Mot[i])
-        Decal=chr(Chiffre+Borne2)
+        Decal=chr(Chiffre-Borne2)
         Nouv=Nouv+Decal
 print(Nouv[:20])
 
@@ -315,6 +315,7 @@ print(L)
 #Ici il faudra choisir en quoi vous voulez transformer la lettre ex: je sais que la derniére
 #Lettre sera un l donc je dis à mon programme qu'il doit transformer ma lettre "e" en "l"
 Chi=input('3-Tu veux la transformer en quoi ?:')
+C=ord(Chi)
 Borne3= L-C
 print(Borne3)
 Nouv=""
@@ -343,7 +344,7 @@ print(Nouv)
 #               MESSAGE 5 TEST 
 #-------------------------------------------------
 
-mon_fichier = open("message5.txt","r",encoding="utf8")
+mon_fichier = open("marine.txt","r",encoding="utf8")
 Mot = mon_fichier.read()
 #Mot = "Lxîn"
 Dic1={}
@@ -421,4 +422,4 @@ for i in Mot:
             Chiffre=ord(i)
             Decal=chr(Chiffre-Borne3)
             Nouv=Nouv+Decal
-print(Nouv)
+print(Nouv[:20])
